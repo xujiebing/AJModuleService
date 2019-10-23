@@ -8,6 +8,5 @@ target 'AJModuleService_Example' do
   target 'AJModuleService_Tests' do
     inherit! :search_paths
 
-    pod 'FBSnapshotTestCase'
   end
 end
