@@ -6,10 +6,26 @@
 //
 
 #import <Foundation/Foundation.h>
+@import UserNotifications;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AJModuleService : NSObject
+// 模块service调用优先级
+typedef enum : NSUInteger {
+    AJModuleServicePriorityVeryLow = 0, // 最低
+    AJModuleServicePriorityLow,
+    AJModuleServicePriorityMedium,
+    AJModuleServicePriorityHigh,
+    AJModuleServicePriorityVeryHigh,    // 最高
+} AJModuleServicePriority;
+
+@interface AJModuleService : NSObject<UIApplicationDelegate, UNUserNotificationCenterDelegate>
+
+/// 注册service
++ (void)registerService;
+
+/// AppDelegate调用优先级
++ (AJModuleServicePriority)priority;
 
 @end
 

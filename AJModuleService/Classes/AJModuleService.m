@@ -9,4 +9,13 @@
 
 @implementation AJModuleService
 
++ (void)registerService {
+    AJModuleService *service = [[self alloc] init];
+    [AJModuleServiceManager.sharedInstance addService:service];
+}
+
++ (AJModuleServicePriority)priority {
+    return AJModuleServicePriorityMedium;
+}
+
 @end

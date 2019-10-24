@@ -25,7 +25,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'AJModuleService/Classes/**/*'
-  s.prefix_header_file = 'AJModuleService/Classes/AJModuleService.pch'
+  s.prefix_header_file = 'AJModuleService/Classes/AJModuleServicePCH.pch'
   s.public_header_files = 'AJModuleService/Classes/AJModuleService.h'
   
   # s.resource_bundles = {

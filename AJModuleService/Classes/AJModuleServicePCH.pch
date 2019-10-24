@@ -13,5 +13,6 @@
 
 #import <AJModuleService/UIApplication+AJModuleService.h>
 #import <AJModuleService/AJModuleServiceManager.h>
+#import <AJModuleService/AJModuleService.h>
 
 #endif /* AJModuleService_pch */
