@@ -14,7 +14,7 @@
     [AJModuleServiceManager.sharedInstance addService:service];
 }
 
-+ (AJModuleServicePriority)priority {
+- (AJModuleServicePriority)priority {
     return AJModuleServicePriorityMedium;
 }
 

@@ -21,11 +21,13 @@ typedef enum : NSUInteger {
 
 @interface AJModuleService : NSObject<UIApplicationDelegate, UNUserNotificationCenterDelegate>
 
+@property (nonatomic, assign, readwrite) AJModuleServicePriority priority;
+
 /// 注册service
 + (void)registerService;
 
 /// AppDelegate调用优先级
-+ (AJModuleServicePriority)priority;
+- (AJModuleServicePriority)priority;
 
 @end
 

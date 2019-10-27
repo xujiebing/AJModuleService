@@ -6,7 +6,6 @@
 //
 
 #import "UIApplication+AJModuleService.h"
-#import <objc/runtime.h>
 
 static void AJSwizzleInstanceMethod(Class cls, SEL originalSelector, Class targetCls, SEL swizzledSelector) {
     Method originalMethod = class_getInstanceMethod(cls, originalSelector);
@@ -29,7 +28,11 @@ static void AJSwizzleInstanceMethod(Class cls, SEL originalSelector, Class targe
 }
 
 - (void)aj_setDelegate:(id<UIApplicationDelegate>)delegate {
-    
+    NSMutableArray *serviceArray = AJModuleServiceManager.sharedInstance.serviceArray;
+    [serviceArray sortUsingDescriptors:@[[[NSSortDescriptor alloc] initWithKey:@"priority" ascending:NO]]];
+    AJModuleServiceDelegate *ajDelegate = AJModuleServiceDelegate.sharedInstance;
+    ajDelegate.originDelagate = delegate;
+    [self aj_setDelegate:(id<UIApplicationDelegate>)ajDelegate];
 }
 
 @end

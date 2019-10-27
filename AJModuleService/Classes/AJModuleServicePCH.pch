@@ -14,5 +14,8 @@
 #import <AJModuleService/UIApplication+AJModuleService.h>
 #import <AJModuleService/AJModuleServiceManager.h>
 #import <AJModuleService/AJModuleService.h>
+#import <AJModuleService/AJModuleServiceDelegate.h>
+
+#import <objc/runtime.h>
 
 #endif /* AJModuleService_pch */

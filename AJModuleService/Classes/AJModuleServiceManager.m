@@ -29,7 +29,6 @@
         return;
     }
     [self.serviceArray addObject:service];
-//    [self.serviceArray sortUsingDescriptors:@[[[NSSortDescriptor alloc] initWithKey:@"priority" ascending:NO]]];
 }
 
 #pragma mark - 懒加载方法
