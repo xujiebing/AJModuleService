@@ -18,7 +18,7 @@
 + (instancetype)sharedInstance {
     static AJModuleServiceManager *instance = nil;
     static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{    //!OCLINT
+    dispatch_once(&onceToken, ^{
         instance = [[[self class] alloc] init];
     });
     return instance;
